@@ -27,8 +27,7 @@ SET(PCL_CXX_FLAGS "-Wall -Wextra -Wno-unknown-pragmas -fno-strict-aliasing -Wno-
 SET(PCL_CXX_FLAGS "${PCL_CXX_FLAGS} -std=c++11")
 
 ExternalProject_Add(pcl_src
-  GIT_REPOSITORY  https://github.com/PointCloudLibrary/pcl
-  GIT_TAG pcl-1.9.1
+  URL http://192.168.0.2:8000/Libraries/packages/pcl-1.9.1.tar.gz
   UPDATE_COMMAND ""
   CMAKE_ARGS -DCMAKE_INSTALL_PREFIX:PATH=${CATKIN_DEVEL_PREFIX}
              -DCMAKE_BUILD_TYPE:STRING=${CMAKE_BUILD_TYPE}
